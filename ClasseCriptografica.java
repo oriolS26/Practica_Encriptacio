@@ -1,17 +1,11 @@
 package Practica_Criptografia;
-import java.util.Scanner;
 
 public class ClasseCriptografica {
-    public static Scanner sc = new Scanner(System.in);
-    public static void main(String[] args) {
-        main inici = new main();
-        inici.encripta();
-    }
 
-    public String encripta(String clau, String missatge) {
+    public String encripta(String missatge, String clau) {
         String resultat = "";
 
-        for (i = 0;i > missatge.length();i++){
+        for (int i = 0;i < missatge.length();i++){
             char caracter = missatge.charAt(i);
             int valorMissatge = (int) caracter;
 
