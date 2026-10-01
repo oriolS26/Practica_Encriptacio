@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import Practica_Criptografia.ClasseCriptografica;
 
 public class ProgramaPrincipal {
     public static Scanner scanner = new Scanner(System.in);

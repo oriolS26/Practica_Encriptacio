@@ -1,5 +1,3 @@
-package Practica_Criptografia;
-
 public class ClasseCriptografica {
 
     public String encripta(String missatge, String clau) {
