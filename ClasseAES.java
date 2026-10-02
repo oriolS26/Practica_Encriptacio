@@ -5,11 +5,9 @@ import java.util.Base64;
 
 public class ClasseAES {
 
-    public static String encripta(String missatge, String clau) {
+    public static String encripta(String missatge, String clau) throws Exception {
 
-        try {
-
-            byte[] clauBytes = clau.getBytes(StandardCharsets.UTF_8);
+            byte[] clauBytes = clau.getBytes();
 
             SecretKeySpec clauAES = new SecretKeySpec(clauBytes, "AES");
 
@@ -17,7 +15,7 @@ public class ClasseAES {
 
             cipher.init(Cipher.ENCRYPT_MODE, clauAES);
 
-            byte[] missatgeBytes = missatge.getBytes(StandardCharsets.UTF_8);
+            byte[] missatgeBytes = missatge.getBytes();
 
             byte[] missatgeXifrat = cipher.doFinal(missatgeBytes);
 
@@ -25,18 +23,12 @@ public class ClasseAES {
 
             return resultat;
 
-        } catch (Exception e) {
-
-            return "Error: " + e.getMessage();
         }
-    }
 
 
-    public static String desencripta(String missatgeXifrat, String clau) {
+    public static String desencripta(String missatgeXifrat, String clau) throws Exception {
 
-        try {
-
-            byte[] clauBytes = clau.getBytes(StandardCharsets.UTF_8);
+            byte[] clauBytes = clau.getBytes();
 
             SecretKeySpec clauAES = new SecretKeySpec(clauBytes, "AES");
 
@@ -48,13 +40,8 @@ public class ClasseAES {
 
             byte[] missatgeDesxifrat = cipher.doFinal(dadesXifrades);
 
-            String resultat = new String(missatgeDesxifrat, StandardCharsets.UTF_8);
+            String resultat = new String(missatgeDesxifrat);
 
             return resultat;
-
-        } catch (Exception e) {
-
-            return "Error: " + e.getMessage();
-        }
     }
 }
