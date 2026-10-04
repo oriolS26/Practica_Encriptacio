@@ -8,6 +8,7 @@ public class ProgramaPrincipal {
         principal.programa();
     }
 
+    
     public void programa() {
 
         ClasseCriptografica criptografia = new ClasseCriptografica();

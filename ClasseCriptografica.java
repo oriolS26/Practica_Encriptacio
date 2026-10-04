@@ -28,7 +28,7 @@ public class ClasseCriptografica {
             int valorMissatge = Integer.parseInt(hexadecimal, 16);
 
             char caracterClau = clau.charAt((i / 2) % clau.length());
-            int valorClau = (int) caracterClau;
+            int valorClau = (int) caracterClau; 
 
             int valorFinal = (valorMissatge - valorClau + 256) % 256;
 
